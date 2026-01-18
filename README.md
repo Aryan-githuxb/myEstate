@@ -1,4 +1,4 @@
-# 🏠 myEstate - Modern Real Estate Marketplace
+# myEstate - Modern Real Estate Marketplace
 
 myEstate is a full-stack MERN (MongoDB, Express, React, Node.js) application designed for seamless property buying and selling. It features an aesthetic blue-white theme, dark mode support, and a unified user experience where any registered user can post their own properties or browse listings from others.
 
@@ -6,7 +6,7 @@ myEstate is a full-stack MERN (MongoDB, Express, React, Node.js) application des
 
 ---
 
-## ✨ Features
+## Features
 
 - **Unified User Accounts**: No separate roles! Sign up to both post your own properties and contact other sellers.
 - **Advanced Filtering & Search**: Filter by property type, rooms, status (Ready/Construction), and category.
@@ -18,7 +18,7 @@ myEstate is a full-stack MERN (MongoDB, Express, React, Node.js) application des
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 **Frontend:**
 - **React.js** (Vite)
@@ -36,7 +36,7 @@ myEstate is a full-stack MERN (MongoDB, Express, React, Node.js) application des
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the repository
 ```bash
