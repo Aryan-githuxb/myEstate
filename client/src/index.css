@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f0f4f8; /* Light Blue Grey */
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode Class */
+body.dark-mode {
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* Utilities */
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-primary {
+  background-color: #2563eb; /* Aesthetic Blue */
+  color: white;
+}
+.btn-primary:hover { background-color: #1d4ed8; }
+
+.btn-danger { background-color: #ef4444; color: white; }
+.btn-secondary { background-color: #e2e8f0; color: #333; }
+
+body.dark-mode .btn-secondary { background-color: #334155; color: white; }
+
+/* Form Elements */
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background-color: white;
+  outline: none;
+}
+
+body.dark-mode input, 
+body.dark-mode select, 
+body.dark-mode textarea {
+  background-color: #1e293b;
+  border-color: #334155;
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+body.dark-mode .navbar {
+  background-color: #1e293b;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+.logo { font-size: 24px; font-weight: 800; color: #2563eb; }
+.nav-links { display: flex; gap: 20px; align-items: center; }
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+.card:hover { transform: translateY(-5px); }
+
+body.dark-mode .card { background-color: #1e293b; }
+
+.card-img { width: 100%; height: 200px; object-fit: cover; }
+.card-content { padding: 20px; }
+.price { color: #2563eb; font-size: 20px; font-weight: bold; }
+.badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  background-color: #dbeafe;
+  color: #1e40af;
+  margin-right: 5px;
+}
+body.dark-mode .badge { background-color: #1e3a8a; color: #dbeafe; }
+
+/* Filters Bar */
+/* Updated Filter Bar for Single Row Layout */
+.filter-bar {
+  background: white;
+  padding: 12px 20px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  overflow-x: auto; /* Allows scrolling on tiny screens instead of breaking line */
+}
+
+body.dark-mode .filter-bar {
+  background: #1e293b;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Make inputs and selects smaller */
+.filter-bar input, 
+.filter-bar select {
+  margin: 0;
+  padding: 8px 12px;
+  font-size: 14px;
+  height: 40px;
+  border-radius: 10px;
+  flex-shrink: 0; /* Prevents them from squishing too much */
+}
+
+.search-bar {
+  flex: 2; /* Give the search bar more space than the dropdowns */
+  min-width: 200px;
+}
+
+.filter-bar select {
+  flex: 1;
+  min-width: 120px;
+  cursor: pointer;
+  background-position: right 10px center;
+}
+
+/* Aesthetic scrollbar for the filter row on mobile */
+.filter-bar::-webkit-scrollbar {
+  height: 4px;
+}
+.filter-bar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+body.dark-mode .modal-content {
+  background: #1e293b;
+  color: white;
+}
+
+.modal-content h3 {
+  margin-bottom: 20px;
+  color: #2563eb;
+}
+
+.modal-content label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 14px;
+}

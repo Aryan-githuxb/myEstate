@@ -1,0 +1,25 @@
+# --- Common / System ---
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+
+# --- Dependencies (Ignores them in both client and server) ---
+node_modules/
+server/seed.js
+
+# --- Environment Variables (Security) ---
+.env
+.env.local
+.env.*.local
+
+# --- Client Specific (Vite/React) ---
+client/dist/
+client/build/
+client/.next/
+
+# --- Server Specific (Node/Express) ---
+server/dist/
+server/build/
+server/logs/
