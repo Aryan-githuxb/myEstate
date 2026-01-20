@@ -41,9 +41,6 @@ export default function CreatePost() {
              <option value="Penthouse">Penthouse</option><option value="Apartment">Apartment</option><option value="Shop">Shop</option>
              <option value="Tenament">Tenament</option><option value="Bungalow">Bungalow</option>
            </select></div>
-           {/* <select name="category" onChange={handleChange}>
-             <option value="Residential">Residential</option><option value="Commercial">Commercial</option>
-           </select> */}
            <div>Area Size<input name="areaSize" type="number" min="100" step="100" placeholder="Size (sqft)" required onChange={handleChange} /></div>
         </div>
         <select name="status" onChange={handleChange}>

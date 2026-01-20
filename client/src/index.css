@@ -6,12 +6,11 @@
 }
 
 body {
-  background-color: #f0f4f8; /* Light Blue Grey */
+  background-color: #f0f4f8;
   color: #333;
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Dark Mode Class */
 body.dark-mode {
   background-color: #0f172a;
   color: #e2e8f0;
@@ -19,7 +18,6 @@ body.dark-mode {
 
 a { text-decoration: none; color: inherit; }
 
-/* Utilities */
 .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
 .btn {
   padding: 10px 20px;
@@ -31,7 +29,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .btn-primary {
-  background-color: #2563eb; /* Aesthetic Blue */
+  background-color: #2563eb;
   color: white;
 }
 .btn-primary:hover { background-color: #1d4ed8; }
@@ -41,7 +39,6 @@ a { text-decoration: none; color: inherit; }
 
 body.dark-mode .btn-secondary { background-color: #334155; color: white; }
 
-/* Form Elements */
 input, select, textarea {
   width: 100%;
   padding: 12px;
@@ -60,7 +57,6 @@ body.dark-mode textarea {
   color: white;
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -81,7 +77,6 @@ body.dark-mode .navbar {
 .logo { font-size: 24px; font-weight: 800; color: #2563eb; }
 .nav-links { display: flex; gap: 20px; align-items: center; }
 
-/* Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -113,8 +108,6 @@ body.dark-mode .card { background-color: #1e293b; }
 }
 body.dark-mode .badge { background-color: #1e3a8a; color: #dbeafe; }
 
-/* Filters Bar */
-/* Updated Filter Bar for Single Row Layout */
 .filter-bar {
   background: white;
   padding: 12px 20px;
@@ -124,7 +117,7 @@ body.dark-mode .badge { background-color: #1e3a8a; color: #dbeafe; }
   align-items: center;
   gap: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  overflow-x: auto; /* Allows scrolling on tiny screens instead of breaking line */
+  overflow-x: auto;
 }
 
 body.dark-mode .filter-bar {
@@ -132,7 +125,6 @@ body.dark-mode .filter-bar {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Make inputs and selects smaller */
 .filter-bar input, 
 .filter-bar select {
   margin: 0;
@@ -140,11 +132,11 @@ body.dark-mode .filter-bar {
   font-size: 14px;
   height: 40px;
   border-radius: 10px;
-  flex-shrink: 0; /* Prevents them from squishing too much */
+  flex-shrink: 0;
 }
 
 .search-bar {
-  flex: 2; /* Give the search bar more space than the dropdowns */
+  flex: 2;
   min-width: 200px;
 }
 
@@ -155,7 +147,6 @@ body.dark-mode .filter-bar {
   background-position: right 10px center;
 }
 
-/* Aesthetic scrollbar for the filter row on mobile */
 .filter-bar::-webkit-scrollbar {
   height: 4px;
 }

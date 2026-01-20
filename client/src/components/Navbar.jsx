@@ -10,7 +10,7 @@ export default function Navbar({ toggleTheme, isDark }) {
       <Link to="/" className="logo">myEstate</Link>
       <div className="nav-links">
         <button onClick={toggleTheme} className="btn btn-secondary">
-          {isDark ? "☀️" : "🌙"}
+          {isDark ? "LIGHT" : "DARK"}
         </button>
         {user ? (
           <>

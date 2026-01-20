@@ -10,7 +10,6 @@ export default function Home() {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [editingProp, setEditingProp] = useState(null);
   
-  // Search & Filter States
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("default");
   const [filters, setFilters] = useState({
@@ -31,7 +30,6 @@ export default function Home() {
     fetchProps();
   }, []);
 
-  // Filter Logic
   useEffect(() => {
     let temp = [...properties];
     
@@ -42,11 +40,9 @@ export default function Home() {
       );
     }
 
-    // Dropdown Filters
     if (filters.type !== "all") temp = temp.filter(p => p.type === filters.type);
     if (filters.status !== "all") temp = temp.filter(p => p.status === filters.status);
 
-    // Sort
     if (sort === "low") temp.sort((a, b) => a.price - b.price);
     if (sort === "high") temp.sort((a, b) => b.price - a.price);
 
@@ -71,7 +67,7 @@ export default function Home() {
       await axios.put(`http://localhost:5000/api/properties/${editingProp._id}`, editingProp);
       alert("Property updated successfully!");
       setIsEditModalOpen(false);
-      window.location.reload(); // Refresh to see changes
+      window.location.reload();
     } catch (err) {
       alert("Error updating property");
     }
@@ -79,7 +75,6 @@ export default function Home() {
 
   return (
     <div className="container">
-      {/* Search & Filters */}
       <div className="filter-bar">
         <input className="search-bar" placeholder="Search by Area" onChange={(e) => setSearch(e.target.value)} />
         <select onChange={(e) => setSort(e.target.value)}>

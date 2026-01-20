@@ -21,10 +21,8 @@ export default function Login() {
         password
       });
       
-      // Update global context
       login(res.data);
       
-      // Redirect to Home
       navigate("/");
     } catch (err) {
       setError(err.response?.data || "Something went wrong. Please try again.");
